@@ -7,6 +7,10 @@ var main = function() {
         $('body').animate({
             left: '285px'
         },200);
+
+        $('.boxBackground').animate({
+            backgroundPositionX: '285px'
+        },200);
     });
     
     $('.icon-close').click(function() {
@@ -17,7 +21,11 @@ var main = function() {
         $('body').animate({
             left: '0px'
         }, 200);
+        $('.boxBackground').animate({
+            backgroundPositionX: '0px'
+        },200);
     });
+
 };
 
 $(document).ready(main);

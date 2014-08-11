@@ -1,0 +1,124 @@
+/* Initial body */
+body {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Initial menu */
+.menu {
+  background: #202024 url('../images/black-thread.png') repeat left top;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+/* Basic styling */
+
+.jumbotron {
+  background-image: url("../images/background.jpg") ;
+  height: 100%;
+  background-size: 1920px 1080px;
+}
+
+.menu ul {
+  border-top: 1px solid #636366;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #636366;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  width: 80px;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
+.spacer {
+	height:25%;
+}
+
+#mainbox {
+	position: absolute;
+	max-width: 50%;
+	max-height: 60%;
+
+  background-image: url("../images/background-blur-darker.jpg");
+  background-attachment: fixed;
+
+	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+    background-size: 1920px 1080px;
+
+    left: 50%;
+    top:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+img.ri
+{
+	position: relative;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+}
+
+img.ri:empty
+{
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-ms-transform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+}
+
+@media screen and (orientation: portrait) {
+  img.ri {
+      max-width: 90%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri {
+      max-height: 90%;
+  }
+}
