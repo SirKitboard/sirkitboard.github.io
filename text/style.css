@@ -110,9 +110,19 @@ body {
 img.ri
 {
 	position: relative;
-	max-width: 60%;
+	max-width: 50%;
 	top: 5%;
 	left: 10%;
+}
+
+img.ri:empty
+{
+	left: 50%;
+	-webkit-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-ms-transform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
 }
 
 @media screen and (orientation: portrait) {
@@ -125,4 +135,10 @@ img.ri
   img.ri {
       max-height: 90%;
   }
+}
+
+h1.name {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	color: #fff;
 }
