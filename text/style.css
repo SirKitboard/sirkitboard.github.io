@@ -115,16 +115,6 @@ img.ri
 	left: 10%;
 }
 
-img.ri:empty
-{
-	left: 50%;
-	-webkit-transform: translate(-50%, 0%);
-	-moz-transform: translate(-50%, 0%);
-	-ms-transform: translate(-50%, 0%);
-	-o-transform: translate(-50%, 0%);
-	transform: translate(-50%, 0%);
-}
-
 @media screen and (orientation: portrait) {
   img.ri {
       max-width: 90%;
