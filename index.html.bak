@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='text/style.css' rel='stylesheet'>
+    <title>Aditya Balwani | Github Pages</title>
+  </head>
+  <body>
+
+    <div class="menu">
+
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="images/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Main body -->
+    <div class="jumbotron">
+		<div class="icon-menu">
+        	<i class="fa fa-bars"></i>
+        	Menu
+      	</div>
+      	<div class="mainbox">
+      		<div class="boxBackground">
+      			<h1 class="name"> Aditya Balwani </h1>
+      			<img src="images/ProfNav.png" class="ri" usemap="#linkmap">
+      			<map name="linkmap">
+      				<area shape="rect" coords="10,0,65,100" href="http://www.facebook.com/reallycoolgeek" target="_blank">
+      				<area shape="rect" coords="136,0,190,100" href="http://www.google.com/+AdityaBalwani" target="_blank">
+      				<area shape="rect" coords="260,0,315,100" href="http://www.github.com/adibalwani03" target="_blank">
+      			</map>
+      		</div>
+    	</div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

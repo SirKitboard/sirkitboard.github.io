@@ -1,46 +1,37 @@
 <html>
   <head>
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--Materialize-->
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
-    <link href='text/style.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href='css/style.css' rel='stylesheet'>
     <title>Aditya Balwani | Github Pages</title>
   </head>
   <body>
-
-    <div class="menu">
-      
-      <!-- Menu icon -->
-      <div class="icon-close">
-        <img src="images/close.png">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Aditya Balwani</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#">Sass</a></li>
+          <li><a href="#">Components</a></li>
+          <li><a href="#">Javascript</a></li>
+          <li><a href="#">Mobile</a></li>
+        </ul>
       </div>
-
-      <!-- Menu -->
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Main body -->
-    <div class="jumbotron">
-		<div class="icon-menu">
-        	<i class="fa fa-bars"></i>
-        	Menu
-      	</div>
-      	<div class="mainbox">
-      		<div class="boxBackground">
-      			<h1 class="name"> Aditya Balwani </h1>
-      			<img src="images/ProfNav.png" class="ri" usemap="#linkmap">
-      			<map name="linkmap">
-      				<area shape="rect" coords="10,0,65,100" href="http://www.facebook.com/reallycoolgeek" target="_blank">
-      				<area shape="rect" coords="136,0,190,100" href="http://www.google.com/+AdityaBalwani" target="_blank">
-      				<area shape="rect" coords="260,0,315,100" href="http://www.github.com/adibalwani03" target="_blank">
-      			</map>
-      		</div>
-    	</div>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    </nav>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
