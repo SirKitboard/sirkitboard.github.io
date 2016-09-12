@@ -97,21 +97,27 @@ Setuptools is a python library that facilitates packaging projects by enhancing 
 #### Linux
 
 To install Setuptools on a Linux machine, run the following command in the terminal
+
 ```
 wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
 ```
 
 Once that is done, you can use the Setuptools to install Pip
+
 ```
 sudo easy_install pip
 ```
+
 #### Mac
 
 The installation instructions for Mac are almost identical installing it on a Linux machine. You run
+
 ```
 curl https://bootstrap.pypa.io/ez_setup.py -o - | sudo python
 ```
+
 and then
+
 ```
 sudo easy_install pip
 ```
@@ -295,6 +301,7 @@ account4 | 'hello' (special characters like ' are not allowed)
 While the interactive shell is good for running Python instructions one at a time, to write entire Python programs, you’ll type the instructions into a text editor. Popular text editors are Sublime Text, Atom and Vim. You can also use a python IDE such as Pycharm or IDLE which is like a text editor but has more features for writing code.
 
 Enter the following code in a file.
+
 ```python
 # This program says hello and asks for my name.
 print('Hello world!')
@@ -316,6 +323,7 @@ With your new program open in the file editor, let’s take a quick tour of the 
 #### Comments
 
 The following line is called a comment.
+
 ```python
 # This program says hello and asks for my name.
 ```
@@ -327,26 +335,32 @@ Sometimes, programmers will put a # in front of a line of code to temporarily re
 
 The print() function displays the string value inside the parentheses on the
 screen.
+
 ```python
 print('Hello world!')
 print('What is your name?') # ask for their name
 ```
+
 The line print('Hello world!') means “Print out the text in the string 'Hello world!'.” When Python executes this line, you say that Python is calling the print() function and the string value is being passed to the function. A value that is passed to a function call is an argument. Notice that the quotes are not printed to the screen. They just mark where the string begins and ends; they are not part of the string value.
 
 #### The input() Function
 The input() function waits for the user to type some text on the keyboard and press enter.
+
 ```python
 myName = input()
 ```
+
 This function call evaluates to a string equal to the user’s text, and the previous line of code assigns the myName variable to this string value.
 You can think of the input() function call as an expression that evaluates to whatever string the user typed in. If the user entered 'Al', then the expression would evaluate to myName = 'Al'.
 
 #### Printing the User’s Name
 
 The following call to print() actually contains the expression 'It is good to meet you, ' + myName between the parentheses.
+
 ```
 print('It is good to meet you, ' + myName)
 ```
+
 Remember that expressions can always evaluate to a single value. If 'Al' is the value stored in myName on the previous line, then this expression evaluates to 'It is good to meet you, Al'. This single string value is then passed to print(), which prints it on the screen.
 
 #### The len() function
@@ -359,6 +373,7 @@ print(len(myName))
 ```
 
 Enter the following into the interactive shell to try this:
+
 ```shell
 >>> len('hello')
 5
@@ -367,11 +382,13 @@ Enter the following into the interactive shell to try this:
 >>> len('')
 0
 ```
+
 Just like those examples, len(myName) evaluates to an integer. It is then passed to print() to be displayed on the screen. Notice that print() allows you to pass it either integer values or string values.
 
 #### The str(), int(), and float() Functions
 
 If you want to concatenate an integer such as 29 with a string to pass to print(), you’ll need to get the value '29', which is the string form of 29. The str() function can be passed an integer value and will evaluate to a string value version of it, as follows:
+
 ```shell
 >>> str(29)
 '29'
@@ -534,6 +551,7 @@ While only one of the if or else clauses will execute, you may have a case where
 * Starting on the next line, an indented block of code (called the elif clause)
 
 Let’s add an elif to the name checker to see this statement in action.
+
 ```python
 if name == 'Alice':
     print('Hi, Alice.')
@@ -641,6 +659,7 @@ for i in range(5):
 The random.randint() function call evaluates to a random integer value between the two integers that you pass it. Since randint() is in the random module, you must first type random. in front of the function name to tell Python to look for this function inside the random module.
 
 Here’s an example of an import statement that imports four different modules:
+
 ```
 import random, sys, os, math
 ```
