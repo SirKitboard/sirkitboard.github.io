@@ -4,7 +4,27 @@ layout: tutorial
 ---
 # Intro to Python
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Intro to Python](#intro-to-python)
+	- [Setting Up](#setting-up)
+		- [Installing Python](#installing-python)
+			- [Linux](#linux)
+			- [Mac](#mac)
+			- [Windows](#windows)
+		- [Setuptools and Pip](#setuptools-and-pip)
+			- [Linux](#linux)
+			- [Mac](#mac)
+			- [Windows](#windows)
+		- [Difference between Python 2.x and 3.x](#difference-between-python-2x-and-3x)
+			- [What are the differences](#what-are-the-differences)
+			- [What version should I use?](#what-version-should-i-use)
+			- [Learn More](#learn-more)
+	- [Using the interactive shell](#using-the-interactive-shell)
+		- [Simple Math](#simple-math)
+		- [Data Types](#data-types)
+
+<!-- /TOC -->
 
 ## Setting Up
 
