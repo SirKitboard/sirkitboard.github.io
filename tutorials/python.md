@@ -285,6 +285,7 @@ A variable is like a box in the computer’s memory where you can store a single
 You’ll store values in variables with an assignment statement. An assignment statement consists of a variable name, an equal sign (called the assignment operator), and the value to be stored. If you enter the assignment statement foo = 42, then a variable named foo will have the integer value 42 stored in it
 
 For example, enter the following into the interactive shell:
+
 ```
 >>> foo = 40
 >>> foo
