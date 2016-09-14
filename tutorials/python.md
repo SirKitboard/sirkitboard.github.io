@@ -93,9 +93,11 @@ python3 -V
 #### Mac
 
 Much like linux, Mac also comes with python 2.7.x preinstalled on the system. You can verify the installation by running the following in the shell
+
 ```
 python -V
 ```
+
 If you would like to upgrade your version of python or install python3 then you can download the latest install from https://www.python.org/downloads/mac-osx/
 
 #### Windows
@@ -103,6 +105,7 @@ If you would like to upgrade your version of python or install python3 then you 
 Unlike the UNIX based operating systems, windows does not come with python preinstalled and because OS level differences, there are certain libraries that don't work on windows (and some that dont work on unix but those are rarer). To install python on your windows machine, download the latest release of the python installer from https://www.python.org/downloads/windows/
 
 After the installation is finished, the python interpreter is stored in `C:\Python27` (might differ based on your version of python). You will also see the python shell in your installed programs. To use python from your normal command line or Powershell you need to add python to your PATH. You can do that by adding `C:\Python27\;C:\Python27\Scripts\` or by running the following in the Powershell.
+
 ```
 [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27\;C:\Python27\Scripts\", "User")
 ```
