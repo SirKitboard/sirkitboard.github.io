@@ -55,6 +55,23 @@ layout: tutorial
 	- [Functions](#functions)
 		- [Functions with parameters](#functions-with-parameters)
 		- [Functions with return statements](#functions-with-return-statements)
+		- [The None Value](#the-none-value)
+		- [Keyword Arguments](#keyword-arguments)
+	- [A Short Program: Guess the Number](#a-short-program-guess-the-number)
+	- [Lists](#lists)
+		- [Getting Individual Values in a List with Indexes](#getting-individual-values-in-a-list-with-indexes)
+		- [Multidimensional List](#multidimensional-list)
+		- [Negative Indexes](#negative-indexes)
+		- [Getting Sublists with Slices](#getting-sublists-with-slices)
+		- [Getting a List’s Length with len()](#getting-a-lists-length-with-len)
+		- [Removing Values from Lists with del Statements](#removing-values-from-lists-with-del-statements)
+		- [Using for Loops with Lists](#using-for-loops-with-lists)
+		- [Finding a Value in a List with the index() Method](#finding-a-value-in-a-list-with-the-index-method)
+		- [Adding Values to Lists with the append() and insert() Methods](#adding-values-to-lists-with-the-append-and-insert-methods)
+	- [The Dictionary Data Type](#the-dictionary-data-type)
+		- [The keys(), values(), and items() Methods](#the-keys-values-and-items-methods)
+		- [Checking Whether a Key or Value Exists in a Dictionary](#checking-whether-a-key-or-value-exists-in-a-dictionary)
+		- [Pretty Printing](#pretty-printing)
 
 <!-- /TOC -->
 
@@ -732,6 +749,7 @@ The definition of the hello() function in this program has a parameter called na
 When you call the len() function and pass it an argument such as 'Hello', the function call evaluates to the integer value 5, which is the length of the string you passed it. In general, the value that a function call evaluates to is called the return value of the function.
 
 When creating a function using the def statement, you can specify what the return value should be with a return statement. A return statement consists of the following:
+
 * The return keyword
 * The value or expression that the function should return
 
@@ -762,3 +780,387 @@ r = random.randint(1, 9)
 fortune = getAnswer(r)
 print(fortune)
 ```
+
+### The None Value
+
+In Python there is a value called None, which represents the absence of a value. None is the only value of the NoneType data type. (Other programming languages might call this value null, nil, or undefined.) Just like the Boolean True and False values, None must be typed with a capital N.
+
+This value-without-a-value can be helpful when you need to store something that won’t be confused for a real value in a variable.
+
+### Keyword Arguments
+
+Most arguments are identified by their position in the function call. For example, random.randint(1, 10) is different from random.randint(10, 1). The function call random.randint(1, 10) will return a random integer between 1 and 10, because the first argument is the low end of the range and the second argument is the high end (while random.randint(10, 1) causes an error).
+
+However, keyword arguments are identified by the keyword put before them in the function call. Keyword arguments are often used for optional parameters. For example, the print() function has the optional parameters end and sep to specify what should be printed at the end of its arguments and between its arguments (separating them), respectively.
+
+If you ran the following program:
+
+```python
+print('Hello')
+print('World')
+```
+
+the output would look like this:
+
+```shell
+Hello
+World
+```
+
+The two strings appear on separate lines because the print() function automatically adds a newline character to the end of the string it is passed. However, you can set the end keyword argument to change this to a different string. For example, if the program were this:
+
+```python
+print('Hello', end='')
+print('World')
+```
+
+the output would look like this:
+
+```shell
+HelloWorld
+```
+
+## A Short Program: Guess the Number
+
+The toy examples I’ve show you so far are useful for introducing basic concepts, but now let’s see how everything you’ve learned comes together in a more complete program. In this section, I’ll show you a simple “guess the number” game. When you run this program, the output will look something like this:
+
+```
+I am thinking of a number between 1 and 20.
+Take a guess.
+10
+Your guess is too low.
+Take a guess.
+15
+Your guess is too low.
+Take a guess.
+17
+Your guess is too high.
+Take a guess.
+16
+Good job! You guessed my number in 4 guesses!
+```
+
+## Lists
+
+The List Data Type
+A list is a value that contains multiple values in an ordered sequence. The term list value refers to the list itself (which is a value that can be stored in a variable or passed to a function like any other value), not the values inside the list value. A list value looks like this: `['cat', 'bat', 'rat', 'elephant']`. Just as string values are typed with quote characters to mark where the string begins and ends, a list begins with an opening square bracket and ends with a closing square bracket, []. Values inside the list are also called items. Items are separated with commas (that is, they are comma-delimited). For example, enter the following into the interactive shell:
+
+```shell
+>>> [1, 2, 3]
+[1, 2, 3]
+>>> ['cat', 'bat', 'rat', 'elephant']
+['cat', 'bat', 'rat', 'elephant']
+>>> ['hello', 3.1415, True, None, 42]
+['hello', 3.1415, True, None, 42]
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam
+['cat', 'bat', 'rat', 'elephant']
+```
+
+### Getting Individual Values in a List with Indexes
+Say you have the list `['cat', 'bat', 'rat', 'elephant']` stored in a variable named spam. The Python code spam[0] would evaluate to 'cat', and spam[1] would evaluate to 'bat', and so on. The integer inside the square brackets that follows the list is called an index. The first value in the list is at index 0, the second value is at index 1, the third value is at index 2, and so on. Figure 4-1 shows a list value assigned to spam, along with what the index expressions would evaluate to. For example, type the following expressions into the interactive shell. Start by assigning a list to the variable spam.
+
+```shell
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[0]
+'cat'
+>>> spam[1]
+'bat'
+>>> spam[2]
+'rat'
+>>> spam[3]
+'elephant'
+spam = ["cat", "bat", "rat", "elephant"]
+>>> ['cat', 'bat', 'rat', 'elephant'][3]
+'elephant'
+>>> 'Hello ' + spam[0]
+'Hello cat'
+>>> 'The ' + spam[1] + ' ate the ' + spam[0] + '.'
+'The bat ate the cat.'
+```
+
+### Multidimensional List
+
+Lists can also contain other list values. The values in these lists of lists can be accessed using multiple indexes, like so:
+
+```shell
+>>> spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+>>> spam[0]
+['cat', 'bat']
+>>> spam[0][1]
+'bat'
+>>> spam[1][4]
+50
+```
+
+### Negative Indexes
+
+While indexes start at 0 and go up, you can also use negative integers for
+the index. The integer value -1 refers to the last index in a list, the value -2
+refers to the second-to-last index in a list, and so on. Enter the following
+into the interactive shell:
+
+```shell
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[-1]
+'elephant'
+>>> spam[-3]
+'bat'
+>>> 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+'The elephant is afraid of the bat.'
+```
+
+### Getting Sublists with Slices
+Just as an index can get a single value from a list, a slice can get several values from a list, in the form of a new list. A slice is typed between square brackets, like an index, but it has two integers separated by a colon. Notice the difference between indexes and slices.
+
+* spam[2] is a list with an index (one integer).
+* spam[1:4] is a list with a slice (two integers).
+
+In a slice, the first integer is the index where the slice starts. The second
+integer is the index where the slice ends. A slice goes up to, but will not
+include, the value at the second index. A slice evaluates to a new list value.
+Enter the following into the interactive shell:
+
+```shell
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[0:4]
+['cat', 'bat', 'rat', 'elephant']
+>>> spam[1:3]
+['bat', 'rat']
+>>> spam[0:-1]
+['cat', 'bat', 'rat']
+```
+
+### Getting a List’s Length with len()
+
+The len() function will return the number of values that are in a list value passed to it, just like it can count the number of characters in a string value. Enter the following into the interactive shell:
+
+```shell
+>>> spam = ['cat', 'dog', 'moose']
+>>> len(spam)
+3
+```
+
+### Removing Values from Lists with del Statements
+
+The del statement will delete values at an index in a list. All of the values in the list after the deleted value will be moved up one index. For example, enter the following into the interactive shell:
+
+```
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> del spam[2]
+>>> spam
+['cat', 'bat', 'elephant']
+>>> del spam[2]
+>>> spam
+['cat', 'bat']
+```
+
+### Using for Loops with Lists
+Earlier, you learned about using for loops to execute a block of code a certain number of times. Technically, a for loop repeats the code block once for each value in a list or list-like value. For example, if you ran this code:
+
+```python
+for i in range(4):
+	print(i)
+```
+
+The output of this program would be as follows:
+
+```
+0
+1
+2
+3
+```
+
+This is because the return value from range(4) is a list-like value that
+Python considers similar to [0, 1, 2, 3]. The following program has the
+same output as the previous one:
+
+```python
+for i in [0, 1, 2, 3]:
+	print(i)
+```
+
+### Finding a Value in a List with the index() Method
+
+List values have an index() method that can be passed a value, and if that
+value exists in the list, the index of the value is returned. If the value isn’t
+in the list, then Python produces a ValueError error. Enter the following into
+the interactive shell:
+
+```python
+>>> spam = ['hello', 'hi', 'howdy', 'heyas']
+>>> spam.index('hello')
+0
+>>> spam.index('heyas')
+3
+>>> spam.index('howdy howdy howdy')
+Traceback (most recent call last):
+ File "<pyshell#31>", line 1, in <module>
+ spam.index('howdy howdy howdy')
+ValueError: 'howdy howdy howdy' is not in list
+```
+
+When there are duplicates of the value in the list, the index of its first
+appearance is returned. Enter the following into the interactive shell, and
+notice that index() returns 1, not 3:
+
+```
+>>> spam = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka']
+>>> spam.index('Pooka')
+1
+```
+
+### Adding Values to Lists with the append() and insert() Methods
+
+To add new values to a list, use the append() and insert() methods. Enter the following into the interactive shell to call the append() method on a list value stored in the variable spam:
+
+```python
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.append('moose')
+90 Chapter 4
+>>> spam
+['cat', 'dog', 'bat', 'moose']
+```
+
+The previous append() method call adds the argument to the end of the list. The insert() method can insert a value at any index in the list. The first argument to insert() is the index for the new value, and the second argument is the new value to be inserted. Enter the following into the interactive shell:
+
+```python
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.insert(1, 'chicken')
+>>> spam
+['cat', 'chicken', 'dog', 'bat']
+```
+
+## The Dictionary Data Type
+
+Like a list, a dictionary is a collection of many values. But unlike indexes for lists, indexes for dictionaries can use many different data types, not just integers. Indexes for dictionaries are called keys, and a key with its associated value is called a key-value pair.
+In code, a dictionary is typed with braces, {}. Enter the following into the interactive shell:
+
+```shell
+>>> myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+```
+
+This assigns a dictionary to the myCat variable. This dictionary’s keys are 'size', 'color', and 'disposition'. The values for these keys are 'fat', 'gray', and 'loud', respectively. You can access these values through their keys:
+
+```shell
+>>> myCat['size']
+'fat'
+>>> 'My cat has ' + myCat['color'] + ' fur.'
+'My cat has gray fur.'
+```
+
+Dictionaries can still use integer values as keys, just like lists use integers for indexes, but they do not have to start at 0 and can be any number.
+
+```shell
+>>> spam = {12345: 'Luggage Combination', 42: 'The Answer'}
+```
+
+### The keys(), values(), and items() Methods
+
+There are three dictionary methods that will return list-like values of the dictionary’s keys, values, or both keys and values: keys(), values(), and items(). The values returned by these methods are not true lists: They cannot be modified and do not have an append() method. But these data types (dict_keys, dict_values, and dict_items, respectively) can be used in for loops. To seehow these methods work, enter the following into the interactive shell:
+
+```
+>>> spam = {'color': 'red', 'age': 42}
+>>> for v in spam.values():
+ print(v)
+red
+42
+```
+
+Here, a for loop iterates over each of the values in the spam dictionary. A for loop can also iterate over the keys or both keys and values:
+
+```
+>>> for k in spam.keys():
+ print(k)
+color
+age
+>>> for i in spam.items():
+ print(i)
+('color', 'red')
+('age', 42)
+```
+
+Using the keys(), values(), and items() methods, a for loop can iterate over the keys, values, or key-value pairs in a dictionary, respectively. Notice that the values in the dict_items value returned by the items() method are tuples of the key and value. If you want a true list from one of these methods, pass its list-like return value to the list() function. Enter the following into the interactive shell:
+
+```
+>>> spam = {'color': 'red', 'age': 42}
+>>> spam.keys()
+dict_keys(['color', 'age'])
+>>> list(spam.keys())
+['color', 'age']
+```
+
+The list(spam.keys()) line takes the dict_keys value returned from keys() and passes it to list(), which then returns a list value of ['color', 'age']. You can also use the multiple assignment trick in a for loop to assign the key and value to separate variables. Enter the following into the interactive shell:
+
+```
+>>> spam = {'color': 'red', 'age': 42}
+>>> for k, v in spam.items():
+ print('Key: ' + k + ' Value: ' + str(v))
+Key: age Value: 42
+Key: color Value: red
+```
+
+### Checking Whether a Key or Value Exists in a Dictionary
+
+Recall from the previous chapter that the in and not in operators can check whether a value exists in a list. You can also use these operators to see whether a certain key or value exists in a dictionary. Enter the following into the interactive shell:
+
+```
+>>> spam = {'name': 'Zophie', 'age': 7}
+>>> 'name' in spam.keys()
+True
+>>> 'Zophie' in spam.values()
+True
+>>> 'color' in spam.keys()
+False
+>>> 'color' not in spam.keys()
+True
+>>> 'color' in spam
+False
+```
+
+### Pretty Printing
+
+If you import the pprint module into your programs, you’ll have access to the pprint() and pformat() functions that will “pretty print” a dictionary’s values. This is helpful when you want a cleaner display of the items in a dictionary than what print() provides. Modify the previous characterCount.py program and save it as prettyCharacterCount.py.
+
+```python
+import pprint
+message = 'It was a bright cold day in April, and the clocks were striking
+thirteen.'
+count = {}
+for character in message:
+ count.setdefault(character, 0)
+ count[character] = count[character] + 1
+pprint.pprint(count)
+```
+
+This time, when the program is run, the output looks much cleaner, with the keys sorted.
+
+```json
+{
+	" ": 13,
+	",": 1,
+	".": 1,
+	"A": 1,
+	"I": 1,
+	"a": 4,
+	"b": 1,
+	"c": 3,
+	"d": 3,
+	"e": 5,
+	"g": 2,
+	"h": 3,
+	"i": 6,
+	"k": 2,
+	"l": 3,
+	"n": 4,
+	"o": 2,
+	"p": 1,
+	"r": 5,
+	"s": 3,
+	"t": 6,
+	"w": 2,
+	"y": 1
+}
+```
+The pprint.pprint() function is especially helpful when the dictionary itself contains nested lists or dictionaries.
