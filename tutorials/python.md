@@ -442,7 +442,7 @@ The str(), int(), and float() functions will evaluate to the string, integer, an
 
 ## Flow Control
 
-So you know the basics of individual instructions and that a program is just a series of instructions. But the real strength of programming isn’t just running (or executing) one instruction after another like a weekend errand list. Based on how the expressions evaluate, the program can decide to skip instructions, repeat them, or choose one of several instructions to run. In fact, you almost never want your programs to start from the first line of code and simply execute every line, straight to the end. Flow control statements can decide which Python instructions to execute under which conditions. These flow control statements directly correspond to the symbols in a flowchart, so I’ll provide flowchart versions of the code discussed in this chapter. The following image shows a flowchart for what to do if it’s raining. Follow the path made by the arrows from Start to End.
+So you know the basics of individual instructions and that a program is just a series of instructions. But the real strength of programming isn’t just running (or executing) one instruction after another like a weekend errand list. Based on how the expressions evaluate, the program can decide to skip instructions, repeat them, or choose one of several instructions to run. In fact, you almost never want your programs to start from the first line of code and simply execute every line, straight to the end. Flow control statements can decide which Python instructions to execute under which conditions. These flow control statements directly correspond to the symbols in a flowchart, so I’ll provide flowchart versions of the code discussed in this section. The following image shows a flowchart for what to do if it’s raining. Follow the path made by the arrows from Start to End.
 
 ![Flowchart](/img/flow.png)
 
@@ -714,7 +714,7 @@ print('You typed ' + response + '.')
 
 ## Functions
 
-You’re already familiar with the print(), input(), and len() functions from the previous chapters. Python provides several builtin functions like these, but you can also write your own functions. A function is like a mini-program within a program.
+You’re already familiar with the print(), input(), and len() functions from the previous sections. Python provides several builtin functions like these, but you can also write your own functions. A function is like a mini-program within a program.
 
 To better understand how functions work, let’s create one. Type this program into the file editor and save it as helloFunc.py:
 
@@ -1022,7 +1022,6 @@ To add new values to a list, use the append() and insert() methods. Enter the fo
 ```python
 >>> foo = ['cat', 'dog', 'bat']
 >>> foo.append('moose')
-90 Chapter 4
 >>> foo
 ['cat', 'dog', 'bat', 'moose']
 ```
@@ -1107,7 +1106,7 @@ Key: color Value: red
 
 ### Checking Whether a Key or Value Exists in a Dictionary
 
-Recall from the previous chapter that the in and not in operators can check whether a value exists in a list. You can also use these operators to see whether a certain key or value exists in a dictionary. Enter the following into the interactive shell:
+Recall from the previous section that the in and not in operators can check whether a value exists in a list. You can also use these operators to see whether a certain key or value exists in a dictionary. Enter the following into the interactive shell:
 
 ```
 >>> foo = {'name': 'Zophie', 'age': 7}
