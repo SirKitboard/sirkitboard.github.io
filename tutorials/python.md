@@ -279,20 +279,20 @@ A variable is like a box in the computer’s memory where you can store a single
 
 #### Assignment Statements
 
-You’ll store values in variables with an assignment statement. An assignment statement consists of a variable name, an equal sign (called the assignment operator), and the value to be stored. If you enter the assignment statement spam = 42, then a variable named spam will have the integer value 42 stored in it
+You’ll store values in variables with an assignment statement. An assignment statement consists of a variable name, an equal sign (called the assignment operator), and the value to be stored. If you enter the assignment statement foo = 42, then a variable named foo will have the integer value 42 stored in it
 
 For example, enter the following into the interactive shell:
 ```
->>> spam = 40
->>> spam
+>>> foo = 40
+>>> foo
 40
 >>> eggs = 2
->>> spam + eggs
+>>> foo + eggs
 42
->>> spam + eggs + spam
+>>> foo + eggs + foo
 82
->>> spam = spam + 2
->>> spam
+>>> foo = foo + 2
+>>> foo
 42
 ```
 
@@ -310,7 +310,7 @@ balance | current-balance (hyphens are not allowed)
 currentBalance | current balance (spaces are not allowed)
 current_balance | 4account (can’t begin with a number)
 \_spam | 42 (can’t begin with a number)
-SPAM | total_$um (special characters like $ are not allowed)
+foo | total_$um (special characters like $ are not allowed)
 account4 | 'hello' (special characters like ' are not allowed)
 
 ## Writing and Running your first program
@@ -594,10 +594,10 @@ elif age > 100:
 You can make a block of code execute over and over again with a while statement. The code in a while clause will be executed as long as the while statement’s condition is True.
 
 ```python
-spam = 0
-while spam < 5:
+foo = 0
+while foo < 5:
     print('Hello, world.')
-    spam = spam + 1
+    foo = foo + 1
 ```
 
 #### break Statements
@@ -852,30 +852,30 @@ A list is a value that contains multiple values in an ordered sequence. The term
 ['cat', 'bat', 'rat', 'elephant']
 >>> ['hello', 3.1415, True, None, 42]
 ['hello', 3.1415, True, None, 42]
->>> spam = ['cat', 'bat', 'rat', 'elephant']
->>> spam
+>>> foo = ['cat', 'bat', 'rat', 'elephant']
+>>> foo
 ['cat', 'bat', 'rat', 'elephant']
 ```
 
 ### Getting Individual Values in a List with Indexes
-Say you have the list `['cat', 'bat', 'rat', 'elephant']` stored in a variable named spam. The Python code spam[0] would evaluate to 'cat', and spam[1] would evaluate to 'bat', and so on. The integer inside the square brackets that follows the list is called an index. The first value in the list is at index 0, the second value is at index 1, the third value is at index 2, and so on. Figure 4-1 shows a list value assigned to spam, along with what the index expressions would evaluate to. For example, type the following expressions into the interactive shell. Start by assigning a list to the variable spam.
+Say you have the list `['cat', 'bat', 'rat', 'elephant']` stored in a variable named foo. The Python code foo[0] would evaluate to 'cat', and foo[1] would evaluate to 'bat', and so on. The integer inside the square brackets that follows the list is called an index. The first value in the list is at index 0, the second value is at index 1, the third value is at index 2, and so on. Figure 4-1 shows a list value assigned to foo, along with what the index expressions would evaluate to. For example, type the following expressions into the interactive shell. Start by assigning a list to the variable foo.
 
 ```shell
->>> spam = ['cat', 'bat', 'rat', 'elephant']
->>> spam[0]
+>>> foo = ['cat', 'bat', 'rat', 'elephant']
+>>> foo[0]
 'cat'
->>> spam[1]
+>>> foo[1]
 'bat'
->>> spam[2]
+>>> foo[2]
 'rat'
->>> spam[3]
+>>> foo[3]
 'elephant'
-spam = ["cat", "bat", "rat", "elephant"]
+foo = ["cat", "bat", "rat", "elephant"]
 >>> ['cat', 'bat', 'rat', 'elephant'][3]
 'elephant'
->>> 'Hello ' + spam[0]
+>>> 'Hello ' + foo[0]
 'Hello cat'
->>> 'The ' + spam[1] + ' ate the ' + spam[0] + '.'
+>>> 'The ' + foo[1] + ' ate the ' + foo[0] + '.'
 'The bat ate the cat.'
 ```
 
@@ -884,12 +884,12 @@ spam = ["cat", "bat", "rat", "elephant"]
 Lists can also contain other list values. The values in these lists of lists can be accessed using multiple indexes, like so:
 
 ```shell
->>> spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
->>> spam[0]
+>>> foo = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+>>> foo[0]
 ['cat', 'bat']
->>> spam[0][1]
+>>> foo[0][1]
 'bat'
->>> spam[1][4]
+>>> foo[1][4]
 50
 ```
 
@@ -901,20 +901,20 @@ refers to the second-to-last index in a list, and so on. Enter the following
 into the interactive shell:
 
 ```shell
->>> spam = ['cat', 'bat', 'rat', 'elephant']
->>> spam[-1]
+>>> foo = ['cat', 'bat', 'rat', 'elephant']
+>>> foo[-1]
 'elephant'
->>> spam[-3]
+>>> foo[-3]
 'bat'
->>> 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+>>> 'The ' + foo[-1] + ' is afraid of the ' + foo[-3] + '.'
 'The elephant is afraid of the bat.'
 ```
 
 ### Getting Sublists with Slices
 Just as an index can get a single value from a list, a slice can get several values from a list, in the form of a new list. A slice is typed between square brackets, like an index, but it has two integers separated by a colon. Notice the difference between indexes and slices.
 
-* spam[2] is a list with an index (one integer).
-* spam[1:4] is a list with a slice (two integers).
+* foo[2] is a list with an index (one integer).
+* foo[1:4] is a list with a slice (two integers).
 
 In a slice, the first integer is the index where the slice starts. The second
 integer is the index where the slice ends. A slice goes up to, but will not
@@ -922,12 +922,12 @@ include, the value at the second index. A slice evaluates to a new list value.
 Enter the following into the interactive shell:
 
 ```shell
->>> spam = ['cat', 'bat', 'rat', 'elephant']
->>> spam[0:4]
+>>> foo = ['cat', 'bat', 'rat', 'elephant']
+>>> foo[0:4]
 ['cat', 'bat', 'rat', 'elephant']
->>> spam[1:3]
+>>> foo[1:3]
 ['bat', 'rat']
->>> spam[0:-1]
+>>> foo[0:-1]
 ['cat', 'bat', 'rat']
 ```
 
@@ -936,8 +936,8 @@ Enter the following into the interactive shell:
 The len() function will return the number of values that are in a list value passed to it, just like it can count the number of characters in a string value. Enter the following into the interactive shell:
 
 ```shell
->>> spam = ['cat', 'dog', 'moose']
->>> len(spam)
+>>> foo = ['cat', 'dog', 'moose']
+>>> len(foo)
 3
 ```
 
@@ -946,12 +946,12 @@ The len() function will return the number of values that are in a list value pas
 The del statement will delete values at an index in a list. All of the values in the list after the deleted value will be moved up one index. For example, enter the following into the interactive shell:
 
 ```
->>> spam = ['cat', 'bat', 'rat', 'elephant']
->>> del spam[2]
->>> spam
+>>> foo = ['cat', 'bat', 'rat', 'elephant']
+>>> del foo[2]
+>>> foo
 ['cat', 'bat', 'elephant']
->>> del spam[2]
->>> spam
+>>> del foo[2]
+>>> foo
 ['cat', 'bat']
 ```
 
@@ -989,15 +989,15 @@ in the list, then Python produces a ValueError error. Enter the following into
 the interactive shell:
 
 ```python
->>> spam = ['hello', 'hi', 'howdy', 'heyas']
->>> spam.index('hello')
+>>> foo = ['hello', 'hi', 'howdy', 'heyas']
+>>> foo.index('hello')
 0
->>> spam.index('heyas')
+>>> foo.index('heyas')
 3
->>> spam.index('howdy howdy howdy')
+>>> foo.index('howdy howdy howdy')
 Traceback (most recent call last):
  File "<pyshell#31>", line 1, in <module>
- spam.index('howdy howdy howdy')
+ foo.index('howdy howdy howdy')
 ValueError: 'howdy howdy howdy' is not in list
 ```
 
@@ -1006,29 +1006,29 @@ appearance is returned. Enter the following into the interactive shell, and
 notice that index() returns 1, not 3:
 
 ```
->>> spam = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka']
->>> spam.index('Pooka')
+>>> foo = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka']
+>>> foo.index('Pooka')
 1
 ```
 
 ### Adding Values to Lists with the append() and insert() Methods
 
-To add new values to a list, use the append() and insert() methods. Enter the following into the interactive shell to call the append() method on a list value stored in the variable spam:
+To add new values to a list, use the append() and insert() methods. Enter the following into the interactive shell to call the append() method on a list value stored in the variable foo:
 
 ```python
->>> spam = ['cat', 'dog', 'bat']
->>> spam.append('moose')
+>>> foo = ['cat', 'dog', 'bat']
+>>> foo.append('moose')
 90 Chapter 4
->>> spam
+>>> foo
 ['cat', 'dog', 'bat', 'moose']
 ```
 
 The previous append() method call adds the argument to the end of the list. The insert() method can insert a value at any index in the list. The first argument to insert() is the index for the new value, and the second argument is the new value to be inserted. Enter the following into the interactive shell:
 
 ```python
->>> spam = ['cat', 'dog', 'bat']
->>> spam.insert(1, 'chicken')
->>> spam
+>>> foo = ['cat', 'dog', 'bat']
+>>> foo.insert(1, 'chicken')
+>>> foo
 ['cat', 'chicken', 'dog', 'bat']
 ```
 
@@ -1053,7 +1053,7 @@ This assigns a dictionary to the myCat variable. This dictionary’s keys are 's
 Dictionaries can still use integer values as keys, just like lists use integers for indexes, but they do not have to start at 0 and can be any number.
 
 ```shell
->>> spam = {12345: 'Luggage Combination', 42: 'The Answer'}
+>>> foo = {12345: 'Luggage Combination', 42: 'The Answer'}
 ```
 
 ### The keys(), values(), and items() Methods
@@ -1061,21 +1061,21 @@ Dictionaries can still use integer values as keys, just like lists use integers 
 There are three dictionary methods that will return list-like values of the dictionary’s keys, values, or both keys and values: keys(), values(), and items(). The values returned by these methods are not true lists: They cannot be modified and do not have an append() method. But these data types (dict_keys, dict_values, and dict_items, respectively) can be used in for loops. To seehow these methods work, enter the following into the interactive shell:
 
 ```
->>> spam = {'color': 'red', 'age': 42}
->>> for v in spam.values():
+>>> foo = {'color': 'red', 'age': 42}
+>>> for v in foo.values():
  print(v)
 red
 42
 ```
 
-Here, a for loop iterates over each of the values in the spam dictionary. A for loop can also iterate over the keys or both keys and values:
+Here, a for loop iterates over each of the values in the foo dictionary. A for loop can also iterate over the keys or both keys and values:
 
 ```
->>> for k in spam.keys():
+>>> for k in foo.keys():
  print(k)
 color
 age
->>> for i in spam.items():
+>>> for i in foo.items():
  print(i)
 ('color', 'red')
 ('age', 42)
@@ -1084,18 +1084,18 @@ age
 Using the keys(), values(), and items() methods, a for loop can iterate over the keys, values, or key-value pairs in a dictionary, respectively. Notice that the values in the dict_items value returned by the items() method are tuples of the key and value. If you want a true list from one of these methods, pass its list-like return value to the list() function. Enter the following into the interactive shell:
 
 ```
->>> spam = {'color': 'red', 'age': 42}
->>> spam.keys()
+>>> foo = {'color': 'red', 'age': 42}
+>>> foo.keys()
 dict_keys(['color', 'age'])
->>> list(spam.keys())
+>>> list(foo.keys())
 ['color', 'age']
 ```
 
-The list(spam.keys()) line takes the dict_keys value returned from keys() and passes it to list(), which then returns a list value of ['color', 'age']. You can also use the multiple assignment trick in a for loop to assign the key and value to separate variables. Enter the following into the interactive shell:
+The list(foo.keys()) line takes the dict_keys value returned from keys() and passes it to list(), which then returns a list value of ['color', 'age']. You can also use the multiple assignment trick in a for loop to assign the key and value to separate variables. Enter the following into the interactive shell:
 
 ```
->>> spam = {'color': 'red', 'age': 42}
->>> for k, v in spam.items():
+>>> foo = {'color': 'red', 'age': 42}
+>>> for k, v in foo.items():
  print('Key: ' + k + ' Value: ' + str(v))
 Key: age Value: 42
 Key: color Value: red
@@ -1106,16 +1106,16 @@ Key: color Value: red
 Recall from the previous chapter that the in and not in operators can check whether a value exists in a list. You can also use these operators to see whether a certain key or value exists in a dictionary. Enter the following into the interactive shell:
 
 ```
->>> spam = {'name': 'Zophie', 'age': 7}
->>> 'name' in spam.keys()
+>>> foo = {'name': 'Zophie', 'age': 7}
+>>> 'name' in foo.keys()
 True
->>> 'Zophie' in spam.values()
+>>> 'Zophie' in foo.values()
 True
->>> 'color' in spam.keys()
+>>> 'color' in foo.keys()
 False
->>> 'color' not in spam.keys()
+>>> 'color' not in foo.keys()
 True
->>> 'color' in spam
+>>> 'color' in foo
 False
 ```
 
