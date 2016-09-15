@@ -115,6 +115,7 @@ nav {
                     width: 128px;
                     height:128px;
                     background-color: rgba(0,0,0,0);
+                    color: transparent;
                     border-radius: 4px;
                     .span {
                         margin: auto;
@@ -218,8 +219,44 @@ nav {
             .nodejs {
                 background-image: url(/img/icons/nodejs.png);
             }
+        }
+    }
 
+    &.worked {
+        background: #eee;
+        .row {
+            .col {
+                padding: 0;
+            }
+        }
+        ul {
+            padding: 0;
+            li {
+                transition: all 0.2s ease-in;
+                &.active {
+                    transition: all 0.2s ease-in;
+                    background:white;
+                    box-shadow: 1px 1px 1px #888888;
+                }
+                overflow: hidden;
+                border-radius: 5px 0 0 5px;
+                img {
+                    max-width:90%;
+                    height: auto;
+                    margin: 10px 5%;
+                    border-radius: 3px;
+                }
+            }
+        }
 
+        .info-container {
+            transition: all 0.2s ease-in;
+            text-align: left;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 1px 1px 1px #888888;
+            padding: 20px !important;
+            height: 100%;
         }
     }
 

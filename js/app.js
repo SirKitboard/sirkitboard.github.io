@@ -17,4 +17,12 @@ window.onscroll = function() {
     }
 }
 
+$(".info-trigger").on('mouseover', function(e) {
+    var targetID = e.currentTarget.id;
+    $(".info-trigger").removeClass("active");
+    $("#"+targetID).addClass("active");
+    $(".info").css('display','none');
+    $("#"+targetID+'-info').css('display', 'block');
+})
+
 $(document).ready(main);

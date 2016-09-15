@@ -92,6 +92,7 @@ nav {
           width: 128px;
           height: 128px;
           background-color: transparent;
+          color: transparent;
           border-radius: 4px; }
           .section.languages ul li .overlay .span {
             margin: auto;
@@ -159,6 +160,33 @@ nav {
         background-image: url(/img/icons/swift.png); }
       .section.languages ul .nodejs {
         background-image: url(/img/icons/nodejs.png); }
+  .section.worked {
+    background: #eee; }
+    .section.worked .row .col {
+      padding: 0; }
+    .section.worked ul {
+      padding: 0; }
+      .section.worked ul li {
+        transition: all 0.2s ease-in;
+        overflow: hidden;
+        border-radius: 5px 0 0 5px; }
+        .section.worked ul li.active {
+          transition: all 0.2s ease-in;
+          background: white;
+          box-shadow: 1px 1px 1px #888888; }
+        .section.worked ul li img {
+          max-width: 90%;
+          height: auto;
+          margin: 10px 5%;
+          border-radius: 3px; }
+    .section.worked .info-container {
+      transition: all 0.2s ease-in;
+      text-align: left;
+      border-radius: 5px;
+      background: white;
+      box-shadow: 1px 1px 1px #888888;
+      padding: 20px !important;
+      height: 100%; }
   .section .overlay {
     font-size: 23px;
     height: 100%;
