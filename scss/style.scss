@@ -286,6 +286,13 @@ nav {
          .card-title {
              text-shadow: 1px 1px #222;
          }
+         .card-action {
+             font-size: 25px;
+             a {
+                 position: relative;
+                 top: -12px;
+             }
+         }
     }
 }
 

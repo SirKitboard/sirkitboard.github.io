@@ -206,6 +206,11 @@ nav {
         color: white; } }
   .section.all-projects .card-title {
     text-shadow: 1px 1px #222; }
+  .section.all-projects .card-action {
+    font-size: 25px; }
+    .section.all-projects .card-action a {
+      position: relative;
+      top: -12px; }
 
 ul {
   padding-left: 40px; }
