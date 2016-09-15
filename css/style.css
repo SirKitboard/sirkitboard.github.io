@@ -97,6 +97,8 @@ nav {
           .section.languages ul li .overlay .span {
             margin: auto;
             text-align: center; }
+          .section.languages ul li .overlay:hover {
+            color: white; }
         .section.languages ul li ul {
           display: block; }
           .section.languages ul li ul li {
