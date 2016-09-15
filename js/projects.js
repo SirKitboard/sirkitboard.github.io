@@ -33,7 +33,7 @@ function toTitleCase(str)
 var projects = [
     {
         name: "Twitch Plays Pokemon Go",
-        image: "https://static-cdn.jtvnw.net/jtv_user_pictures/twitchpokemongo-profile_image-f33b850a04c080ae-300x300.png",
+        image: "/img/twitch.png",
         description:"Used Python Flask, Twitch API and a Jailbroken iPhone to do a croudsourced playthrough of Pokemon Go. Featured in <a href='http://www.theverge.com/2016/7/12/12167120/twitch-plays-pokemon-go-stream'>The Verge</a>, <a href='http://www.polygon.com/2016/7/12/12159908/pokemon-go-cheating-ban-gps-spoofing'>Polygon</a> and <a href='http://nintendoeverything.com/twitch-plays-pokemon-go-is-now-a-thing/'>Nintendo Everything</a>",
         status: "completed",
         date: "July 2016",
@@ -110,6 +110,24 @@ var projects = [
                 link: "https://play.google.com/store/apps/details?id=io.github.adibalwani03.wat"
             }
         ]
+    },
+    {
+        name: "SBU LaundryView",
+        title: 'SBU LaundryView',
+        image: "/img/laundry.png",
+        description:"Android app for checking the status of laundry machines in Stony Brook and setting alarms",
+        status: "completed",
+        date: "Dec 2015",
+        links: [
+            {
+                type: "play",
+                link: "https://play.google.com/store/apps/details?id=io.github.adibalwani03.wat"
+            },
+            {
+                type: 'github',
+                link: 'https://github.com/SirKitboard/LaundryView'
+            }
+        ]
     }
 ]
 var filteredProjects = projects;
@@ -132,7 +150,7 @@ $(document).ready(function() {
                "<div class='card-action'>" +
                  project.links.map(function(link) {
                     return "<a class='right' href='"+link.link+"'><span class='socicon-"+link.type+"'></span></a>"
-                 }) +
+                }).join('') +
                "</div>" +
              "</div>" +
            "</div>"
