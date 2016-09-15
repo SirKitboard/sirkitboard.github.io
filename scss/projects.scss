@@ -4,7 +4,7 @@
 }
 
 nav {
-    background-color: rgba(50,50,50, 0);
+    background-color: rgba(50,50,50, 1);
     font-family: 'Raleway', sans-serif;
     .nav-wrapper {
         padding: 0 8px;
@@ -109,7 +109,7 @@ nav {
 
             li {
                 vertical-align: top;
-                margin: 18px;
+                margin: 5px;
                 width:128px !important;
                 .overlay {
                     width: 128px;
@@ -250,28 +250,9 @@ ul {
   padding-left: 40px;
 }
 
-#projectsContainer {
-    text-align: left;
-
-    // .card {
-    //     .card-image {
-    //         position: relative;
-    //
-    //         img {
-    //             position: absolute;
-    //             top:50%;
-    //             left:0px;
-    //             transform: translateY(-50%);
-    //             height:auto;
-    //             width: 100%;
-    //         }
-    //     }
-    // }
-}
-
 @media screen and (max-width: 768px) {
       h1 {
-            font-size: 60px;
+            font-size: 35px;
       }
       h2 {
             font-size: 20px;
@@ -279,12 +260,6 @@ ul {
       h3 {
           font-size: 25px;
       }
-}
-
-@media only screen and (min-width: 993px){
-    .container {
-        width: 85% !important;
-    }
 }
 
 .page-footer {
