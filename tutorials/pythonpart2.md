@@ -1,4 +1,10 @@
+---
+title: Intro to Python 2
+layout: tutorial
+---
+
 # Introduction to Data Viz With Python
+
 ## Co-organized by BMES and SBCS
 
 # Setup
@@ -23,7 +29,7 @@ Whether you are a Bio major, a CS major, a Linguistics major, or any other major
 
 There are multiple methods we can use to help us understand our data:
 
-* Data Analysis (Statisticss)
+* Data Analysis (Statistics)
 	* ex. mean, median, max, min
 * Data Visualization
 	* Graphs:
