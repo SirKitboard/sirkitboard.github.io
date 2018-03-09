@@ -1,0 +1,229 @@
+.content {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 100px; }
+
+nav {
+  font-family: 'Raleway', sans-serif; }
+  nav .nav-wrapper {
+    padding: 0 8px; }
+
+body {
+  background-color: #fffff7; }
+
+.section {
+  width: 100%;
+  text-align: center; }
+  .section.home {
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    font-size: 24px;
+    font-variant: normal;
+    font-weight: 500;
+    color: white; }
+    .section.home .section-background-overlay {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); }
+    .section.home .section-foreground-overlay {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0); }
+    .section.home .blinking-text-wrapper {
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%); }
+      .section.home .blinking-text-wrapper span {
+        font-size: 58px; }
+  .section.interests {
+    color: #222;
+    background-color: #ffffee; }
+    .section.interests ul {
+      padding: 0;
+      display: inline; }
+      .section.interests ul li {
+        padding: 0;
+        width: 300px;
+        height: 300px;
+        background-size: auto 300px;
+        background-position: center;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 20px;
+        display: inline-block; }
+      .section.interests ul .gaming {
+        background-image: url(/img/gaming.png); }
+      .section.interests ul .programming {
+        background-image: url(/img/programming.jpg); }
+      .section.interests ul .soccer {
+        background-image: url(/img/soccer.jpg); }
+    @media screen and (max-width: 1030px) {
+      .section.interests ul li {
+        width: 200px;
+        height: 200px;
+        background-size: auto 200px; } }
+    @media screen and (max-width: 1030px) {
+      .section.interests ul li {
+        width: 300px;
+        height: 300px;
+        background-size: auto 300px; } }
+  .section.languages {
+    color: #222;
+    background-color: #fafafa; }
+    .section.languages ul {
+      padding: 0;
+      display: inline-block;
+      text-align: center;
+      vertical-align: top; }
+      .section.languages ul li {
+        vertical-align: top;
+        margin: 5px;
+        width: 128px !important;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: auto 128px;
+        overflow: hidden;
+        display: inline-block; }
+        .section.languages ul li .overlay {
+          width: 128px;
+          height: 128px;
+          background-color: rgba(0, 0, 0, 0);
+          border-radius: 4px; }
+          .section.languages ul li .overlay .span {
+            margin: auto;
+            text-align: center; }
+        .section.languages ul li ul {
+          display: block; }
+          .section.languages ul li ul li {
+            margin: 8px 0px !important;
+            display: block;
+            border-radius: 4px;
+            margin: auto;
+            width: 48px;
+            height: 48px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 48px;
+            text-align: center; }
+            .section.languages ul li ul li .overlay {
+              width: 100%;
+              height: 100%;
+              background-size: auto 64px; }
+      .section.languages ul .java {
+        background-image: url(/img/icons/java.png); }
+      .section.languages ul .spring {
+        background-image: url(/img/icons/spring.png); }
+      .section.languages ul .play {
+        background-image: url(/img/icons/play.png); }
+      .section.languages ul .python {
+        background-image: url(/img/icons/python.ico); }
+      .section.languages ul .flask {
+        background-image: url(/img/icons/flask.png); }
+      .section.languages ul .android {
+        background-image: url(/img/icons/android.png); }
+      .section.languages ul .bootstrap {
+        background-image: url(/img/icons/bootstrap.png); }
+      .section.languages ul .css {
+        background-image: url(/img/icons/css.png); }
+      .section.languages ul .databases {
+        background-image: url(/img/icons/databases.png); }
+      .section.languages ul .html {
+        background-image: url(/img/icons/html.png); }
+      .section.languages ul .flask {
+        background-image: url(/img/icons/flask.png); }
+      .section.languages ul .javascript {
+        background-image: url(/img/icons/javascript.png); }
+      .section.languages ul .materialize {
+        background-image: url(/img/icons/materialize.png); }
+      .section.languages ul .mongo {
+        background-image: url(/img/icons/mongo.png); }
+      .section.languages ul .react {
+        background-image: url(/img/icons/react.png); }
+      .section.languages ul .ruby {
+        background-image: url(/img/icons/ruby.png); }
+      .section.languages ul .sass {
+        background-image: url(/img/icons/sass.png); }
+      .section.languages ul .sql {
+        background-image: url(/img/icons/sql.png); }
+      .section.languages ul .jquery {
+        background-image: url(/img/icons/jquery.png); }
+      .section.languages ul .web {
+        background-image: url(/img/icons/web.png); }
+      .section.languages ul .mobile {
+        background-image: url(/img/icons/mobile.ico); }
+      .section.languages ul .swift {
+        background-image: url(/img/icons/swift.png); }
+      .section.languages ul .nodejs {
+        background-image: url(/img/icons/nodejs.png); }
+  .section .overlay {
+    font-size: 23px;
+    height: 100%;
+    width: 100%;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in; }
+    .section .overlay span {
+      margin: auto;
+      text-align: center; }
+    .section .overlay:hover {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      color: white; }
+    @media screen and (max-width: 1030px) {
+      .section .overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white; } }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px; }
+
+  h2 {
+    font-size: 20px; }
+
+  h3 {
+    font-size: 25px; } }
+.page-footer .icon {
+  margin: 16px 5px; }
+
+.search-bar {
+  position: relative; }
+  .search-bar i {
+    position: absolute;
+    top: 12px;
+    left: 14px; }
+  .search-bar .search-input {
+    padding-left: 40px !important; }
+
+#recipe-list .card {
+  border-radius: 6px;
+  overflow: hidden; }
+  #recipe-list .card .card-image {
+    position: relative;
+    max-height: 200px;
+    min-height: 200px;
+    overflow: hidden; }
+    #recipe-list .card .card-image img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+  #recipe-list .card .card-content {
+    min-height: 123px; }
+
+h5[id] + ul, h6[id] + ul {
+  list-style-type: circle;
+  padding-left: 40px; }
+  h5[id] + ul li, h6[id] + ul li {
+    list-style-type: circle; }
+
+h6 {
+  padding-left: 20px;
+  font-size: 1.3rem; }
+
+/*# sourceMappingURL=recipes.css.map */

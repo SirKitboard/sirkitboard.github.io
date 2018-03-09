@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Materialize-->
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <!-- <link href="https://raw.githubusercontent.com/jwarby/pygments-css/master/monokai.css" rel='stylesheet' type='text/css'> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/css/monokai.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/recipes.css" rel="stylesheet">
+    <title>Aditya Balwani | Github Pages</title>
+  </head>
+  <body>
+		{% include navbar-fixed.html %}
+    <div class="content-wrapper">
+		<div class="parallax-container" style="position:relative;top:-64px;">
+			<div class="parallax section home valign-wrapper">
+				<img src="{{page.imageURL}}" style="display: block; transform: translate3d(-50%, 403px, 0px);">
+				<div class="section-background-overlay">
+		
+				</div>
+				<div class="blinking-text-wrapper valign">
+					<h1>{{page.title}}</h1>
+				</div>
+				<div class="section-foreground-overlay" style="background-color: rgba(30, 30, 30, 0);">
+		
+				</div>
+			</div>
+		</div>
+		<div class="content container">
+			{{ content }}
+		</div>
+
+		<div class="section-spacer"></div>
+
+		{% include recipe-list.html %}
+
+    </div>
+	<div class="parallax-container" style="position:relative;top:20px;">
+		<div class="parallax">
+			<img src="/img/end.jpg"/>
+		</div>
+	</div>
+	<footer class="page-footer">
+		<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+			<h5 class="white-text">Aditya Balwani</h5>
+			</div>
+			<div class="col l4 offset-l2 s12">
+			<ul>
+				<li><a class="grey-text text-lighten-3" href="#!">Resume</a></li>
+				<li><a class="grey-text text-lighten-3" href="#!">Projects</a></li>
+				<li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+			</ul>
+			</div>
+		</div>
+		</div>
+		<div class="footer-copyright">
+		<div class="container">
+		© 2016 Aditya Balwani
+		<a class="grey-text icon text-lighten-4 right" href="https://www.linkedin.com/in/aditya-balwani-2205067b"><span class="socicon-linkedin "></span></a>
+		<a class="grey-text icon text-lighten-4 right" href="https://www.github.com/SirKitboard"><span class="socicon-github"></span></a>
+		<a class="grey-text icon text-lighten-4 right" href="https://www.facebook.com/reallycoolgeek"><span class="socicon-facebook"></span></a>
+		</div>
+		</div>
+	</footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

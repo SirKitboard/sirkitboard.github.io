@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row"><h2>Recipes List</h2></div>
+	<!-- <div class="row">
+		<div class="search-bar col s12">
+		<i class="material-icons">search</i>
+		<input class="search-input" type="text" placeholder="Search..."></input>
+		</div>
+	</div>
+	 -->
+	<div class="row" id="recipe-list">
+		{% for post in site.posts %}
+			<div class="col s12 m4 l3">
+			<div class="card">
+				<div class="card-image">
+				<img src="{{post.imageURL}}">
+				</div>
+				<div class="card-content">
+				<p><h5>{{post.title}}</h5></p>
+				</div>
+				<div class="card-action">
+				<a href="{{post.url}}">Link</a>
+				</div>
+			</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

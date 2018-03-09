@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Materialize-->
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <!-- <link href="https://raw.githubusercontent.com/jwarby/pygments-css/master/monokai.css" rel='stylesheet' type='text/css'> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/css/monokai.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/recipes.css" rel="stylesheet">
+    <title>Aditya Balwani | Github Pages</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper black white-text">
+        <a href="/" class="brand-logo">Aditya Balwani</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/resume/current.pdf" target="_blank">RESUME</a></li>
+            <li><a href="/projects">PROJECTS</a></li>
+            <li><a href="https://www.github.com/SirKitboard" target="_blank">GITHUB</a></li>
+            <li><a href="mailto:adibalwani@gmail.com">CONTACT</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="/resume/current.pdf">Resume</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="https://www.github.com/SirKitboard">Github</a></li>
+            <li><a href="mailto:adibalwani@gmail.com">Contact</a></li>
+          </ul>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+        {% include recipe-list.html %}
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- <script src="/js/recipes-index.js"></script> -->
+  </body>
+</html>
